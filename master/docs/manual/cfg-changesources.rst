@@ -946,6 +946,7 @@ The :bb:chsrc:`GitHubPullrequestPoller` accepts the following arguments:
 
 ``token``
     A GitHub API token to execute all requests to the API authenticated. It is strongly recommended to use a API token since it increases GitHub API rate limits significantly.
+    Can be a :ref:`Secret`.
 
 ``repository_type``
    Set which type of repository link will be in the `repository` property. Possible values ``https``, ``svn``, ``git`` or ``svn``. This link can then be used in a Source Step to checkout the source.

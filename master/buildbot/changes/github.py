@@ -102,6 +102,7 @@ class GitHubPullrequestPoller(base.ReconfigurablePollingChangeSource,
                         repository_type="https",
                         github_property_whitelist=None,
                         **kwargs):
+        token = yield self.renderSecrets(token)
         yield base.ReconfigurablePollingChangeSource.reconfigService(
             self, name=self.name, **kwargs)
 
